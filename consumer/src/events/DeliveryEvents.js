@@ -13,6 +13,7 @@ class DeliveryEvents {
             ch.consume(ex, function (msg) {
                 const parsedMsg = JSON.parse(msg.content.toString());
                 console.log(" [x] Delivered Item ", parsedMsg);
+                ch.ack(msg);
             });
         });
     }
