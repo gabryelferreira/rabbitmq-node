@@ -1,5 +1,5 @@
 class DeliveryEvents {
-    amqpConn;
+    
     constructor(amqpConn) {
         this.amqpConn = amqpConn;
     }

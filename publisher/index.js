@@ -14,6 +14,7 @@ app.use((req, _, next) => {
 app.use('/', require('./src/routes'));
 
 app.listen(8080, async () => {
+    console.log("Running on port 8080");
     amqpConn = await connectToRabbitMQ();
 });
 

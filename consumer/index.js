@@ -13,6 +13,7 @@ app.use((req, _, next) => {
 })
 
 app.listen(8081, async () => {
+    console.log("Running on port 8081");
     amqpConn = await connectToRabbitMQ();
 
     const deliveryEvents = new DeliveryEvents(amqpConn);
